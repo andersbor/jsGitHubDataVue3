@@ -34,7 +34,9 @@
         <div v-if="errormessage">{{errormessage}}</div>
 
         <ol>
-            <li v-for="repo in repos">{{repo.name}}</li>
+            <li v-for="repo in repos">
+                <a v-bind:href="repo.html_url">{{repo.name}}</a>
+            </li>
         </ol>
     </div>
     <script src="index.js"></script>
